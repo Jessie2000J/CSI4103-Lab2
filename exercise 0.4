@@ -1,0 +1,14 @@
+title exerice 0.4
+
+browser->server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+server->browser: HTML document
+browser->server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: the css file
+browser->server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server->browser: the  JavaScript file
+Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+browser->server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: show the stored information
+Note right of browser: The browser executes the callback function that renders the notes
+browser->server: SAVE input information
+server->browser: add the new value into the data.json and refresh the webpage
